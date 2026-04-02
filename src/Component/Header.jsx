@@ -6,12 +6,16 @@ import Navlink from "./Navlink";
 
 const Header = () => {
   const pathname = usePathname();
-  if(pathname.startsWith("/dashboard")) return <></>;
+  if (pathname.startsWith("/dashboard")) return <></>;
 
   return (
     <header className="p-4 flex justify-between items-center border-b flex-wrap">
-      <Link href={"/"} className="text-lg font-semibold">
-        🐸 Dev Story
+      <Link href={"/"} className="text-3xl font-semibold text-white">
+        <div className="bg-black px-4 py-2">
+          {" "}
+          <span className="text-4xl">🐸</span> Dev{" "}
+          <span className="text-green-400">Story</span>
+        </div>
       </Link>
 
       <nav className="flex flex-wrap gap-4">
